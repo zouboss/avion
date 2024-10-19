@@ -1,0 +1,2 @@
+c'est un petit projet d'études fait avec Django,Css et sql lite. C'est un mini gestionnaire de vols d'aeroport avec la possibilité pour l'admin de créér des vols avec les destinations de son choix
+d'ajouter, de modifier ou de supprimer des passagers selon les capacités de l'avion, ensuite d'afficher les détails de chaque vol. il y a aussi la gestion d'utilisateurs par l'admin avec connexion/deconnexion 
