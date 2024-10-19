@@ -1,0 +1,101 @@
+body {
+  background-image: url('/static/images/slider.jpg');
+  margin-top: 100px;
+  margin-bottom: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
+
+
+form {
+  max-width: 3500px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+    outline: none;
+}
+
+label {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+button[type="submit"] {
+    width: 70%;
+    padding: 5px;
+    background-color: #3A7728;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 60px;
+    font-size: 15px;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #40BF40;
+}
+
+
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+}
+
+.success {
+    color: #27ae60;
+    font-size: 12px;
+}
+
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+label.required::after {
+    content: " *";
+    color: #e74c3c;
+}

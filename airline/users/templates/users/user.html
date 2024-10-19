@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+  {% load static %}
+    <link rel="stylesheet" href="{% static 'css/user.css' %}">
+</head>
+<body>
+    {% block body %}
+
+    <h1> BIENVENUE {{ request.user.first_name }}</h1>
+
+    <ul>
+        <li><p>Username:{{ request.user.username }}</p></li>
+        <li><p>Email: {{ request.user.email }}</p></li>
+    </ul>
+    <a href="{% url 'logout' %}">Deconnexion</a>
+
+    {% endblock %}
+
+
+</body>
+</html>

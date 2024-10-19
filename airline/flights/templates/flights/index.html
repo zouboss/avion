@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>la liste des vols</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    {% block body %}
+            <h1>Tableau des Vols</h1>
+        <ul>
+            {% for flight in flights %}
+                <li>
+                    <a href="{% url 'flight' flight.id %}">
+                        Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}
+                    </a>
+                </li>
+
+            {% endfor %}
+        </ul>
+
+    {% endblock %}
+
+</body>
+</html>

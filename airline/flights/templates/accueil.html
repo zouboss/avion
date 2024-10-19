@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/accueil.css' %}">
+</head>
+<body>
+    <h1>Bienvenue sur la page d'accueil</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'indexa' %}">Tableau des differents Vols</a></li>
+            <li><a href="{% url 'index' %}">Page de connexion pour les utilisateurs</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flights</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/flight.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        {% block body %}
+            <h1>Flight: {{ flight.id }}</h1>
+            <ul>
+                <li> Départ: {{ flight.origin }}</li>
+                <li> Arrivée: {{ flight.destination }}</li>
+                <li> Durée: {{ flight.duration }} </li>
+            </ul>
+
+            <h2>Passagers</h2>
+            <ul>
+                {% for passenger in passengers %}
+                <li>{{ passenger }}</li>
+                {% empty %}
+                <li>Pas de passager</li>
+                {% endfor %}
+            </ul>
+
+            <h2>Ajouter des Passagers</h2>
+            <form action="{% url 'book' flight.id %}" method="post">
+                {% csrf_token %}
+                <select name="passenger">
+                    {% for passenger in non_passengers %}
+                        <option value="{{ passenger.id }}">{{ passenger }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Ajouter </button>
+            </form>
+
+            <a href="{% url 'indexa' %}">retour sur la liste des vols</a>
+        {% endblock %}
+    </div>
+</body>
+
+</html>
